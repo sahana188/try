@@ -1,0 +1,40 @@
+<div class="card-container" *ngFor="let data of this.resData">
+    <div class="card u-clearfix">
+      <div class="card-body">
+        <span>
+            <img src="../../assets/img/smily.jpeg" height="20px" width="30px">
+        </span>
+        <h2 class="card-title">
+          {{data.item_name}} Recipe
+        </h2>
+        <h3 class="card-title">
+          Price : {{data.price}}
+        </h3>
+        <h3 class="card-title">
+          Total Price : {{data.total_price}}
+        </h3>
+        <span class="card-description subtle">
+          Customer Requirements : double cheese , more spicy, less onion.
+        </span>
+        <div class="card-read btn btn-{{data.status}}"
+         (click)="updateStatus($event,data)">
+         {{data.status|uppercase}}
+        </div>
+       </div>
+      <div class="row">
+           <div class="col-sm-4">
+            <img src="../../assets/img/{{data.image}}" 
+            alt="" height="200px" width="200px" 
+            class="card-media"/>
+           </div>
+           <div class="col-sm-7 adClass">
+            <p>{{data.customer_name|uppercase}}</p>
+            <p>{{data.street}}</p>
+            <p>{{data.area}}</p>
+            <p>{{data.city}}</p>
+            <p>{{data.pincode}}</p>
+           </div>
+      </div>
+    </div>
+    <div class="card-shadow"></div>
+</div>

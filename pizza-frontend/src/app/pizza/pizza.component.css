@@ -1,0 +1,10 @@
+  table 
+  {
+    width: 98%;
+    margin: 30px 20px;
+  }
+  .btn-Received{background-color:red;margin-top: 10px;width: 100px;}
+  .btn-Preparing{background-color:orange;margin-top: 10px;width: 100px}
+  .btn-Ready{background-color:green;width: 100px;margin-top: 10px;}
+
+
